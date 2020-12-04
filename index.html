@@ -69,8 +69,13 @@
         var currX = parseInt(spaceship.style.left) + x; 
         var currY = parseInt(spaceship.style.top) + y;
 
-       
+       spaceship.style.left = Math.random() * 100 + currX  + 'px';
+       spaceship.style.top = Math.random() * 100 +currY + 'px';
+     }
 
+     window.addEventListener("mouseover", function(event)){
+       
+     }
 
     </script>
   </body>

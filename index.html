@@ -37,15 +37,7 @@
     //9. Concatenate the pixel unit to your calculation. Ex. + 'px';
       
   
-  //Move the alien away from the cursor when the cursor is moved close to the alien image.
-  //10. Get the image element & store it in a variable 
-
-  //11. Get browser's current width & height to set a horizontal limit for the alien image & store in variables.
-
-
-    //12. Attach an event handler to the alien image for the mouseover event
-    //13. Use the target property of the event object to change the coordinates. Ex. event.target.style.left = your coordinates calculation (again refer to steps 8 & 9)
-    //14. Your coordinates calculation requires the variables created in step 11.
+  
 
 
       window.addEventListener('DOMContentLoaded', (event) => {
@@ -73,11 +65,33 @@
        spaceship.style.top = Math.random() * 100 +currY + 'px';
      }
 
-     window.addEventListener("mouseover", function(event)){
+      //Move the alien away from the cursor when the cursor is moved close to the alien image.
+      //10. Get the image element & store it in a variable 
+
+       //11. Get browser's current width & height to set a horizontal limit for the alien image & store in variables.
+
+
+       //12. Attach an event handler to the alien image for the mouseover event
+        //13. Use the target property of the event object to change the coordinates. Ex. event.target.style.left = your coordinates calculation (again refer to steps 8 & 9)
+        //14. Your coordinates calculation requires the variables created in step 11.
+
+       window.addEventListener("mouseover", function(event){
+        
         var alien = document.getElementById("alien"); 
+       
         winHeight = window.innerHeight; 
         winWidth = window.innerWidth; 
-     }
+        
+        var currXAlien = parseInt(alien.style.left); 
+        var currYAlien = parseInt(alien.style.top);
+       
+        event.target.style.left = Math.random()*winHeight/4 *1 + 20 + 'px'; 
+        event.target.style.top = Math.random()*winWidth/4 * 1 + 20 + 'px'; 
+
+      }); 
+
+      })
+
 
     </script>
   </body>

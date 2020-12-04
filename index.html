@@ -61,7 +61,16 @@
         var x = event.offsetX; 
         var y = event.offsetY; 
 
-      
+        var spaceship = document.getElementById('spaceship1'); 
+
+        spaceship.style.left = x + 'px';
+        spaceship.style.top = y + 'px';
+
+        var currX = parseInt(spaceship.style.left) + x; 
+        var currY = parseInt(spaceship.style.top) + y;
+
+       
+
 
     </script>
   </body>
